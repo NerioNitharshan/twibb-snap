@@ -62,7 +62,7 @@ export default function PostImage() {
                 <DownloadButton handleDownload={handleDownload} />
               </div>
             ) : (
-              <CameraButton handleUploadImage={handleUploadImage} className="w-full md:max-w-[500px]" label="Download your Image" />
+              <CameraButton handleUploadImage={handleUploadImage} className="w-full md:max-w-[500px]" label="Add your Image" />
             )}
           </div>
         </div>
