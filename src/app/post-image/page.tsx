@@ -1,4 +1,5 @@
 "use client";
+
 import React, { ChangeEvent, Suspense, useState } from "react";
 import * as htmlToImage from 'html-to-image';
 import { default as NextImage } from "next/image";
@@ -25,7 +26,7 @@ export default function PostImage() {
   const handleDownload = () => {
     const node = document.getElementById('resultComponent')
     if (node) {
-      htmlToImage.toPng(node).then(function (dataUrl) {
+      htmlToImage.toPng(node, {skipFonts:true}).then(function (dataUrl) {
         download(dataUrl)
       })
     }
